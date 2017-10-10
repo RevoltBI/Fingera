@@ -4,6 +4,7 @@ library(httr)
 library(data.table)
 library(dplyr)
 library(xml2)
+install.packages("purrr")
 library(purrr)
 
 #=======BASIC INFO ABOUT THE Fingera EXTRACTOR========#
