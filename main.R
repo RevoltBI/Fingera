@@ -94,10 +94,10 @@ getTimelogs<-function(api,user_id){
 }
 
 #iterate over users
-user_ids<-getStats(api,"users")%>%filter(as.Date(substr(created_at,1,10))<as.Date(end_date))%>%select(id)%>%.[,1]
+user_ids<-getStats(url,"users")%>%filter(as.Date(substr(created_at,1,10))<as.Date(end_date))%>%select(id)%>%.[,1]
 
 test<-user_ids[1:10]
 
-res<-map_df(user_ids,function(x){getTimelogs(api,x)})
+res<-map_df(user_ids,function(x){getTimelogs(url,x)})
 
 write_csv(res,"out/tables/time_logs.csv")
