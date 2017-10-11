@@ -2,6 +2,7 @@
 #Install the libraries
 library(httr)
 library(data.table)
+install.packages("dtplyr")
 library(dtplyr)
 library(xml2)
 install.packages("purrr")
